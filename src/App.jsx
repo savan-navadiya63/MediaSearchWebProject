@@ -1,20 +1,17 @@
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./components/pages/HomePage";
+import HomePage from "./components/pages/Homepage";
 import CollectionPage from "./components/pages/CollectionPage";
-import Navbar from "./components/Navbar"; 
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
-    <div className=" text-white w-full  bg-gray-950">
-
-    <Navbar></Navbar>
+    <div className="min-h-screen w-full text-white bg-gray-950 overflow-x-hidden">
+      <Navbar></Navbar>
       <Routes>
-          
-        <Route path="/" element={<HomePage />}/>
-        <Route path="/collection" element={<CollectionPage />}/>
-
+        <Route path="/" element={<HomePage />} />
+        <Route path="/collection" element={<CollectionPage />} />
       </Routes>
-      </div>
+    </div>
   );
 };
 

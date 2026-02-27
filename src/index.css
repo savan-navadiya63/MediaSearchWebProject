@@ -1,7 +1,27 @@
 @import "tailwindcss";
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 body {
   background-color: black;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 #bottom {
@@ -13,4 +33,11 @@ body {
   --c2: rgb(56, 116, 120);
   --c3: rgb(98, 149, 132);
   --c4: rgb(226, 241, 231);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
 }

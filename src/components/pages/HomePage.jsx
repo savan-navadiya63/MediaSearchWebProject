@@ -3,18 +3,21 @@ import SearchBar from "../SearchBar";
 import Tabs from "../Tabs";
 import { useSelector } from "react-redux";
 const Home = () => {
+  const { query } = useSelector((store) => store.search);
+  console.log(query);
 
-    const { query} = useSelector((store) => store.search,);
-    console.log(query);
-    
   return (
-    <div> 
-
-      
+    <div className="w-full min-h-screen">
       <SearchBar />
-      
-      {query != "" ?<div> <Tabs /> <ResutlGrid /> </div> : ''}
 
+      {query != "" ? (
+        <div className="w-full">
+          {" "}
+          <Tabs /> <ResutlGrid />{" "}
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
