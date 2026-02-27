@@ -2,7 +2,7 @@ import ResutlGrid from "../ResutlGrid";
 import SearchBar from "../SearchBar";
 import Tabs from "../Tabs";
 import { useSelector } from "react-redux";
-const HomePage = () => {
+const Homepage = () => {
   const { query } = useSelector((store) => store.search);
   console.log(query);
 
@@ -22,4 +22,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Homepage;
